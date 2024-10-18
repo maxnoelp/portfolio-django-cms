@@ -29,4 +29,5 @@ class AboutMeModelPlugin(CMSPluginBase):
     parent_classes = ["ContainerModelPlugin"]
 
     def render(self, context, instance, placeholder):
-        return super(AboutMeModel, self).render(context, instance, placeholder)
+        context = super(AboutMeModelPlugin, self).render(context, instance, placeholder)
+        return context
