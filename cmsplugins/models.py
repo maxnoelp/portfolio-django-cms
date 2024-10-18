@@ -3,7 +3,7 @@ from colorfield.fields import ColorField
 from django.db import models
 from django.utils.translation import gettext as _
 from djangocms_text.fields import HTMLField
-from FilerImageField.Fields import FilerImageField
+from filer.fields.image import FilerImageField
 
 from .utils import COLOR_PALETTE
 
@@ -20,7 +20,7 @@ class ContainerModel(CMSPlugin):
 
 class AboutMeModel(CMSPlugin):
     text = HTMLField(blank=True)
-    image = FilerImageField(_("Bild hochladen"), related_name="images", blank=True)
+    image = FilerImageField(related_name="images", blank=True, on_delete=models.CASCADE)
     background_color = ColorField(
         _("Hintergrundfarbe auswählen"), choices=COLOR_PALETTE, default="#FFFFFF"
     )
