@@ -1,8 +1,8 @@
-from cms.plugin_model import CMSPlugin
+from cms.models.pluginmodel import CMSPlugin
 from colorfield.fields import ColorField
 from django.db import models
 from django.utils.translation import gettext as _
-from django_text.fields import HTMLField
+from djangocms_text.fields import HTMLField
 
 from .utils import COLOR_PALETTE
 
