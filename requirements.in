@@ -27,6 +27,7 @@ djangocms-text
 djangocms-frontend
 
 django-filer
+django-colorfield
 
 
 pip-tools  # needed for compilation of this file into requirements.txt, see start of file
