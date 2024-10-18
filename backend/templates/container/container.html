@@ -1,9 +1,10 @@
-<div>
-  <div class="container">
-    <h1>{{instance.title}}</h1>
+{% load cms_tags %}
+<div class="d-flex w-100 justify-content-center">
+  <div class="container-sm m-5">
+    <h1 style="font-size: 6rem">{{instance.title}}</h1>
     <div>
       {% for plugin in instance.child_plugin_instances %}
-      <div>{%render_plugin%}</div>
+      <div>{%render_plugin plugin%}</div>
       {% endfor %}
     </div>
   </div>
