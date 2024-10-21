@@ -29,4 +29,12 @@ class AboutMeModel(CMSPlugin):
         return self.text
 
 
+class CodingSkillsmodel(CMSPlugin):
+    text = HTMLField(blank=True, null=True)
+    icon_url = models.URLField(_("Icon Urleinfügen"), max_length=200)
+
+    def __str__(self):
+        return self.text
+
+
 # Create your models here.
